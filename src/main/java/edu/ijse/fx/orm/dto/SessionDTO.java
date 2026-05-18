@@ -8,10 +8,10 @@ import lombok.*;
 @Setter
 @ToString
 
-public class TherapistDTO {
+public class SessionDTO {
+    private String sessionId;
     private String therapistId;
-    private String programId;
-    private String therapistName;
-    private String therapistPhone;
-
+    private String patientId;
+    private String date;
+    private String time;
 }

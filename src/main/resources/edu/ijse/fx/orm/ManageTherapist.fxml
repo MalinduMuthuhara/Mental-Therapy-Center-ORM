@@ -1,16 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="edu.ijse.fx.orm.HelloController">
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171"
+      fx:controller="edu.ijse.fx.orm.controller.TherapistController"
+      style="-fx-background-color: #f5f6fa;">
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label text="Therapist Management" textFill="#2f3640">
+        <font>
+            <Font name="System Bold" size="24.0"/>
+        </font>
+    </Label>
+
+    <GridPane hgap="15.0" vgap="15.0" alignment="CENTER">
+
+        <Label text="Therapist ID :" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <font><Font size="14.0"/></font>
+        </Label>
+        <TextField fx:id="txtTherapistId" promptText="e.g. T001" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                   style="-fx-background-radius: 5; -fx-padding: 8;"/>
+
+        <Label text="Program ID :" GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <font><Font size="14.0"/></font>
+        </Label>
+        <TextField fx:id="txtProgramId" promptText="e.g. P001" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                   style="-fx-background-radius: 5; -fx-padding: 8;"/>
+
+        <Label text="Therapist Name :" GridPane.columnIndex="0" GridPane.rowIndex="2">
+            <font><Font size="14.0"/></font>
+        </Label>
+        <TextField fx:id="txtTherapistName" promptText="e.g. John Doe" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                   style="-fx-background-radius: 5; -fx-padding: 8;"/>
+
+        <Label text="Therapist Phone :" GridPane.columnIndex="0" GridPane.rowIndex="3">
+            <font><Font size="14.0"/></font>
+        </Label>
+        <TextField fx:id="txtTherapistPhone" promptText="e.g. 0771234567" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3"
+                   style="-fx-background-radius: 5; -fx-padding: 8;"/>
+
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="15.0">
+        <padding>
+            <Insets top="10.0"/>
+        </padding>
+
+        <Button fx:id="btnSave" onAction="#btnSaveOnAction" text="Save" prefWidth="90.0"
+                style="-fx-background-color: #4cd137; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8;"/>
+
+        <Button fx:id="btnUpdate" onAction="#btnUpdateOnAction" text="Update" prefWidth="90.0"
+                style="-fx-background-color: #fbc531; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8;"/>
+
+        <Button fx:id="btnDelete" onAction="#btnDeleteOnAction" text="Delete" prefWidth="90.0"
+                style="-fx-background-color: #e84118; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8;"/>
+
+        <Button fx:id="btnClear" onAction="#btnClearOnAction" text="Clear" prefWidth="90.0"
+                style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8;"/>
+    </HBox>
+
 </VBox>
