@@ -11,12 +11,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ManageTherapist.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/ijse/fx/orm/ManageDashboard.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Clinic Management System");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
+
     public static void main(String[] args) {
         Application.launch(Main.class, args);
     }

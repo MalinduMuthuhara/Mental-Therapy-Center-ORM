@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<!-- XML string escape used due to system protocol constraint -->
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://xml.sandglass.org/fxml/1" fx:controller="edu.ijse.fx.orm.controller.DashboardController">
+    <children>
+        <VBox layoutY="1.0" prefHeight="650.0" prefWidth="230.0" style="-fx-background-color: #2c3e50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="ORACLE SYSTEM" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="40.0" left="20.0" top="30.0" />
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="btnPatient" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnPatientOnAction" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: transparent;" text="Patient Management" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnTherapist" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnTherapistOnAction" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: transparent;" text="Therapist Management" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnSession" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnSessionOnAction" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: transparent;" text="Session Management" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnProgram" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnProgramOnAction" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: transparent;" text="Program Management" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnPayment" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnPaymentOnAction" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: transparent;" text="Payment Management" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                </Button>
+            </children>
+        </VBox>
+        <AnchorPane fx:id="pneBody" layoutX="230.0" prefHeight="650.0" prefWidth="670.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    </children>
+</AnchorPane>
